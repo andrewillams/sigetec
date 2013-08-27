@@ -1,0 +1,13 @@
+Options +FollowSymLinks
+IndexIgnore */*
+RewriteEngine on
+
+# se o diretorio ou arquivo existir, use esse diretorio
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# caso contrario, redirecione para index.php
+RewriteRule . index.php
+
+#deny from all

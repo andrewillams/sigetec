@@ -1,0 +1,11 @@
+<?php
+
+class SaudacaoController extends Controller
+{
+
+	public function actionIndex(){
+		$saudacao = 'E aí, como tá';
+		$this->render('index',array('saudacao'=>$saudacao));
+	}
+
+}
